@@ -7,12 +7,14 @@ import { ServiceService } from '../service.service';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
+  dataSource:any
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol']
 
   constructor(private service: ServiceService) { }
 
   ngOnInit(): void {
     this.service.getAllProducts().subscribe(res =>{
-      console.log(res)
+      this.dataSource =res
     })
   }
 

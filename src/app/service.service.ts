@@ -11,6 +11,6 @@ export class ServiceService {
 
   getAllProducts() {
     return this.http.get(
-      `https://jsonplaceholder.typicode.com/posts`);}
+      `https://fakestoreapi.com/users`);}
 
 }
